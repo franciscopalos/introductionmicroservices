@@ -9,10 +9,10 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @RestController
 public class MicroserviceController {
 	
-	@HystrixCommand (fallbackMethod="gestionarenvio")
-	@RequestMapping(value="/identificador", method=RequestMethod.GET)
+	
+	@RequestMapping(value="/randomIdentifier", method=RequestMethod.GET)
 	public String getIdentifier(Integer id){
-		return "Nuevo identificador" + java.util.UUID.randomUUID();
+		return "New identifier ->" + java.util.UUID.randomUUID();
 	}
 
 }
